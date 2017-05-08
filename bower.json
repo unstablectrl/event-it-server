@@ -1,0 +1,20 @@
+{
+  "name": "event-it-server",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Unstable <unstablectrl@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/unstablectrl/event-it-server",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

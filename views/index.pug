@@ -3,3 +3,22 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  hr
+
+  h2 Add Brand
+
+  form(method="post" action="/add")
+    .form-group
+      label(for="inputBrand") Brand Name
+      input(type="text" class="form-control" id="inputBrand" name="brand" placeholder="eg. Feim")
+    button(type="submit" class=" btn btn-primary") Submit
+  
+  hr
+
+  each brand in brands
+    .card
+      //- img(src='img_avatar.png', alt='Avatar', style='width:100%')
+      .container
+          h4
+            strong= brand.brand

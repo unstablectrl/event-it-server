@@ -86,4 +86,20 @@ body {
   .card {
     width: 700px; } }
 
+.jumbotron {
+  background-color: transparent; }
+
+.lobster {
+  font-family: 'Lobster', cursive; }
+
+.sign-box {
+  padding: 20px;
+  margin: 20px 0;
+  width: 500px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px; }
+
+.hide {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */

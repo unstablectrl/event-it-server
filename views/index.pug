@@ -1,24 +1,19 @@
-extends layout
+extends layout-main
 
-block content
-  h1= title
-  p Welcome to #{title}
-
-  hr
-
-  h2 Add Brand
-
-  form(method="post" action="/add")
-    .form-group
-      label(for="inputBrand") Brand Name
-      input(type="text" class="form-control" id="inputBrand" name="brand" placeholder="eg. Feim")
-    button(type="submit" class=" btn btn-primary") Submit
+block body
+  .jumbotron.jumbotron-fluid
+    .container
+      .display-3.lobster Welcom to #{title}
+      p.lead #{description}
   
-  hr
-
-  each brand in brands
-    .card
-      //- img(src='img_avatar.png', alt='Avatar', style='width:100%')
-      .content
-        h4
-          strong= brand.brand
+  .container
+    .sign-box.mx-auto
+      .test(action='/about')
+        .form-group
+          input#email.form-control(type='email', placeholder='Email')
+        .form-group
+          input#password.form-control(type='password', placeholder='Password')
+        .form-group
+          button#login-btn.btn.btn-primary.lobster(type='submit') Log in
+          button#signup-btn.btn.btn-warning.lobster Sign up
+          button#logout-btn.btn.btn-danger.lobster.hide Log out

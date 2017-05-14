@@ -1,0 +1,11 @@
+extends layout-main
+
+block body
+  #banner.page-header
+    .row
+      .col-md-6.col-sm-12
+        h1= title
+  .row
+    .col-md-6.col-sm-12
+      p !{(content).replace(/\n/g, '<br/>')}
+      button#logout-btn.btn.btn-danger.lobster.hide Log out

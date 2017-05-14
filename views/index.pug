@@ -1,4 +1,4 @@
-extends layout-main
+extends layouts/main
 
 block body
   .jumbotron.jumbotron-fluid
@@ -6,14 +6,16 @@ block body
       .display-3.lobster Welcom to #{title}
       p.lead #{description}
   
-  .container
-    .sign-box.mx-auto
-      .test(action='/about')
-        .form-group
-          input#email.form-control(type='email', placeholder='Email')
-        .form-group
-          input#password.form-control(type='password', placeholder='Password')
-        .form-group
-          button#login-btn.btn.btn-primary.lobster(type='submit') Log in
-          button#signup-btn.btn.btn-warning.lobster Sign up
-          button#logout-btn.btn.btn-danger.lobster.hide Log out
+  .container.text-center
+    .sign-box.mx-auto.hide
+      .form-group
+        input#email.form-control(type='email', placeholder='Email')
+      .form-group
+        input#password.form-control(type='password', placeholder='Password')
+      .form-group
+        button#login-btn.btn.btn-primary.lobster(type='submit') Log in
+        button#signup-btn.btn.btn-warning.lobster Sign up
+        button#logout-btn.btn.btn-danger.lobster.hide Log out
+    
+    form(action='/sign-in')
+      button.btn.btn-primary.lobster(type='submit') Sign In

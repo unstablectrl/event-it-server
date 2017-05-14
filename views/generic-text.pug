@@ -1,4 +1,7 @@
-extends layout-main
+extends layouts/main
+
+block append scripts
+  script(src='/javascripts/firebaseui-auth-rest.js')
 
 block body
   #banner.page-header
@@ -8,4 +11,6 @@ block body
   .row
     .col-md-6.col-sm-12
       p !{(content).replace(/\n/g, '<br/>')}
-      button#logout-btn.btn.btn-danger.lobster.hide Log out
+      #sign-in-status
+      #sign-in
+      #account-details

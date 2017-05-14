@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.6"
+    "bootstrap": "v4.0.0-alpha.6",
+    "firebaseui": "^1.0.1"
   }
 }

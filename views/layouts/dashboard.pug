@@ -1,31 +1,28 @@
 extends main
 
-block body
-  nav.navbar.navbar-inverse.navbar-fixed-top
-    .container-fluid
-      .navbar-header
-        button(type='button' class='navbar-toggle collapsed' data-toggle="collapse" data-target='#navbar' aria-expanded='false' aria-controls='navbar')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a(class='navbar-brand' href='#') Event It
-      #navbar.navbar-collapse.collapse
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href='#') Dashboard
-          li
-            a(href='#') Settings
-          li
-            a(href='#') Profile
+block append styles
+  link(rel='stylesheet', href='/stylesheets/dashboard.css')
 
-  .container-fluid
-    .row
-      .col-sm-3.col-md-2.sidebar
-        ul.nav.nav-sidebar
-          li.active
-            a(href='#') Brands
-          li
-            a(href='#') Alerts
-      .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
-        block content
+block body
+  .demo-layout-transparent.mdl-layout.mdl-js-layout
+    header.mdl-layout__header.mdl-layout__header--transparent
+      .mdl-layout__header-row
+        // Title
+        span.mdl-layout-title Title
+        // Add spacer, to align navigation to the right
+        .mdl-layout-spacer
+        // Navigation
+        nav.mdl-navigation
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+    .mdl-layout__drawer
+      span.mdl-layout-title Title
+      nav.mdl-navigation
+        a.mdl-navigation__link(href='') Link
+        a.mdl-navigation__link(href='') Link
+        a.mdl-navigation__link(href='') Link
+        a.mdl-navigation__link(href='') Link
+    main.mdl-layout__content
+      block content

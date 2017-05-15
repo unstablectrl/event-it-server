@@ -4,7 +4,7 @@ let ctrlEvents = require('../controllers/events')
 
 /* Home pages */
 router.get('/', ctrlEvents.listEvents)
+router.post('/', ctrlEvents.addEvent)
 router.get('/:eventid', ctrlEvents.showEvent)
-router.post('/:eventid', ctrlEvents.addEvent)
 
 module.exports = router

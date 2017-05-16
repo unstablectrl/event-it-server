@@ -1,4 +1,4 @@
-const db = require('../lib/firebase').database;
+const firebase = require('../lib/firebase');
 
 module.exports.listEvents = (req, res) => {
   res.render('events', {
@@ -13,16 +13,20 @@ module.exports.showEvent = (req, res) => {
   })
 }
 
-let createEvent = (name, st) => {
-  db.ref('events').push({
-    eventname: name,
-    start: st
+let createEvent = (name, st, uid) => {
+  firebase.database().ref('users/'+uid+'/events').push({
+    "eventname": name,
+    "start": st
+  }).catch(e => {
+    //TODO handle error
   })
 }
 
 module.exports.addEvent = (req, res) => {
   let name = req.body.name
-  let start = req.body.start
-  createEvent(name, st)
+  let st = req.body.start
+  let uid = req.body.uid
+  console.log(uid)
+  createEvent(name, st, uid)
   res.redirect(req.get('referer'));
 }

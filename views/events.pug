@@ -2,7 +2,6 @@ extends layouts/dashboard
 
 block append scripts
   script(src='/javascripts/events.js')
-  script(src='/javascripts/firebaseui-auth-rest.js')
 
 block append body
   #account-details
@@ -13,21 +12,20 @@ block append body
           h5#exampleModalLabel.modal-title New message
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
-        form(action="/dashboard", method="post")
-          .modal-body
+        .modal-body
+          form
             .form-group
               label.form-control-label(for='event-name') Name:
-              input#event-name.form-control(type='text', name='name')
+              input#event-name.form-control(type='text', name='name', value='event name')
             .form-group
-              label.form-control-label(for='example-datetime-local-input') Date and time
-          input#example-datetime-local-input.form-control(type='datetime-local', value='2017-05-15T11:11', name='start')
+              label.form-control-label(for='start-datetime') Date and time
+              input#start-datetime.form-control(type='datetime-local', value='2017-05-15T11:11', name='start')
             //- .form-group
             //-   label.form-control-label(for='message-text') Message:
             //-   textarea#message-text.form-control
-          .modal-footer
-            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-            button.btn.btn-primary(type='submit') Send message
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+          button#create-event.btn.btn-primary(type='button') Add Event
 
 block content
   button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal', data-whatever='event') Add Event
-  

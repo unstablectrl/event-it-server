@@ -1,8 +1,5 @@
 extends layouts/main
 
-block append scripts
-  script(src='/javascripts/firebaseui-auth-rest.js')
-
 block body
   #banner.page-header
     .row
@@ -11,6 +8,3 @@ block body
   .row
     .col-md-6.col-sm-12
       p !{(content).replace(/\n/g, '<br/>')}
-      #sign-in-status
-      #sign-in
-      #account-details

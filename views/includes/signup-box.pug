@@ -1,0 +1,10 @@
+.container.text-center
+  form.sign-box.mx-auto(action='/signup', method='post')
+    .form-group
+      input#email.form-control(type='email', placeholder='Email', name='email')
+    .form-group
+      input#password.form-control(type='text', placeholder='Full name', name='name')
+    .form-group
+      input#password.form-control(type='password', placeholder='Password', name='password')
+    .form-group
+      button#signup-btn.btn.btn-warning.lobster Sign up

@@ -15,13 +15,5 @@ block body
 
   #firebaseui-auth-container
 
-  .container.text-center
-    .sign-box.mx-auto.hide
-      .form-group
-        input#email.form-control(type='email', placeholder='Email')
-      .form-group
-        input#password.form-control(type='password', placeholder='Password')
-      .form-group
-        button#login-btn.btn.btn-primary.lobster(type='submit') Log in
-        button#signup-btn.btn.btn-warning.lobster Sign up
-        button#logout-btn.btn.btn-danger.lobster.hide Log out
+  //- include includes/signin-box.pug
+  //- include includes/signup-box.pug

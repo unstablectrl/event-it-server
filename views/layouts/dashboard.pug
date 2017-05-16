@@ -3,26 +3,24 @@ extends main
 block append styles
   link(rel='stylesheet', href='/stylesheets/dashboard.css')
 
+block append scripts
+  script(src='/javascripts/dashboard.js')
+  script(src='/javascripts/firebaseui-auth-rest.js')
+
 block body
   .demo-layout-transparent.mdl-layout.mdl-js-layout
     header.mdl-layout__header.mdl-layout__header--transparent
       .mdl-layout__header-row
         // Title
-        span.mdl-layout-title Title
+        span.mdl-layout-title= title
         // Add spacer, to align navigation to the right
         .mdl-layout-spacer
         // Navigation
         nav.mdl-navigation
-          a.mdl-navigation__link(href='') Link
-          a.mdl-navigation__link(href='') Link
-          a.mdl-navigation__link(href='') Link
-          a.mdl-navigation__link(href='') Link
+          a#logout-btn.mdl-navigation__link(href='/') Log out
     .mdl-layout__drawer
-      span.mdl-layout-title Title
+      span.mdl-layout-title= title
       nav.mdl-navigation
-        a.mdl-navigation__link(href='') Link
-        a.mdl-navigation__link(href='') Link
-        a.mdl-navigation__link(href='') Link
-        a.mdl-navigation__link(href='') Link
+        a.mdl-navigation__link(href='') Tab
     main.mdl-layout__content
       block content

@@ -1,0 +1,9 @@
+.container.text-center
+  form.sign-box.mx-auto(action='/signin', method='post')
+    .form-group
+      input#email.form-control(type='email', placeholder='Email', name='email')
+    .form-group
+      input#password.form-control(type='password', placeholder='Password', name='password')
+    .form-group
+      button#login-btn.btn.btn-primary.lobster(type='submit') Log in
+      button#logout-btn.btn.btn-danger.lobster.hide Log out

@@ -1,11 +1,20 @@
 extends layouts/main
 
+block append styles
+  link(rel='stylesheet', href='/bower_components/firebaseui/dist/firebaseui.css')
+
+block append scripts
+  script(src='/bower_components/firebaseui/dist/firebaseui.js')
+  script(src='/javascripts/firebaseui-auth-main.js')
+
 block body
   .jumbotron.jumbotron-fluid
     .container
       .display-3.lobster Welcom to #{title}
       p.lead #{description}
-  
+
+  #firebaseui-auth-container
+
   .container.text-center
     .sign-box.mx-auto.hide
       .form-group
@@ -16,7 +25,3 @@ block body
         button#login-btn.btn.btn-primary.lobster(type='submit') Log in
         button#signup-btn.btn.btn-warning.lobster Sign up
         button#logout-btn.btn.btn-danger.lobster.hide Log out
-    
-    form(action='/sign-in')
-      button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored.lobster.preserve-case(type='submit') Sign In
-

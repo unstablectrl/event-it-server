@@ -10,6 +10,7 @@ var uiConfig = {
     firebase.auth.EmailAuthProvider.PROVIDER_ID
   ],
   signInFlow: 'popup',
+  credentialHelper: firebaseui.auth.CredentialHelper.NONE,
   // Terms of service url.
   tosUrl: 'about'
 };
